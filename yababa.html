@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Child & Family</title>
+
+  <style>
+   body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f5fc;
+}
+
+/* ------------------------ */
+/* COUPLE CARDS */
+/* ------------------------ */
+.couple-section {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.person-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.person-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.person-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* ------------------------ */
+/* BIOGRAPHY SECTION */
+/* ------------------------ */
+.biography {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.biography h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.biography p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ------------------------ */
+/* CHILDREN GRID */
+/* ------------------------ */
+.children-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.children-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 0 20px;
+}
+
+.child-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.child-card:hover {
+  transform: scale(1.03);
+}
+
+.child-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.child-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* ------------------------ */
+/* POPUP */
+/* ------------------------ */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 850px;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.popup-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popup-images img {
+  width: 45%;
+  max-width: 330px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.placeholder-box {
+  width: 45%;
+  max-width: 330px;
+  height: 300px;
+  background: #e5e7eb;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ------------------------ */
+/* POPUP TEXT SECTION */
+/* ------------------------ */
+
+.popup-text {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.popup-text h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-text p {
+  font-size: 16px;
+  color: #444;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+  </style>
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Couple Section -->
+  <section class="couple-section" data-aos="fade-up">
+    <div class="person-card">
+      <img src="ya baba.jpeg" alt="First child">
+      <h3>Umar Ahmed Shehu (Uncle Baba)</h3>
+    </div>
+
+    <div class="person-card">
+      <img src="bbbbbbbbbb.jpeg" alt="Spouse image">
+      <h3>Maimuna Adamu & Hauwa umar shehu</h3>
+    </div>
+  </section>
+
+
+  <!-- Biography Between Couple and Children -->
+  <section class="biography" data-aos="fade-up">
+    <h2>Biography</h2>
+    <p>
+        Umar Shehu Ahmed, born on 30 April 1968, is married to three wives: Hauwa Umar Shehu, whom he married in February 1991; Maimuna Adamu, married on 1 January 2011; and Hauwa Muhammed, married on 28 March 2017. He began his education at Zarumai Primary School, then attended Bida Science Teacher College for his secondary education. He later studied at the National Open University, graduating with a Second-Class degree. He works with the National Identity Management Commission (NIMC).
+    </p> </section>
+  <!-- Children Grid -->
+  <section class="children-section" data-aos="fade-up">
+    <h2>Their Children</h2>
+
+    <div class="children-grid">
+
+      <div class="child-card" onclick="openPopup( 'mrs(aa).jpeg',
+      'Mr and mrs Aminu', 
+      'Age: 34 years',)">
+        <img src="aunty1(baba).jpeg" alt="Kid 1">
+        <h4>Fatima Umar Shehu</h4>
+      </div>
+
+      <div class="child-card" onclick="openPopup('Nuhu.jpeg',
+      'married to Proff Nuhu',
+       'Children:Hauwa Nuhu(ismat) , Muhammad Nuhu(islam), Khadijah Nuhu(israh)',)">
+        <img src="aunty2(baba).jpeg" alt="Kid 2">
+        <h4>Amina Umar Shehu</h4>
+      </div>
+
+       <div class="child-card" onclick="openPopup('uncle1(baba).jpeg',
+      'Abdylmalik Umar Shehu.',
+       'Age: 30 years',)">
+        <img src="uncle1(baba).jpeg" alt="Kid 4">
+        <h4>Abdulmalik Umar Shehu</h4>
+      </div>
+
+        <div class="child-card" onclick="openPopup('danjuma(baba).jpeg',
+      'Muhammad Umar Shehu (Late)',
+       'Age: 25 years',)">
+        <img src="danjuma(baba).jpeg" alt="Kid 4">
+        <h4>Muhammad Umar Shehu</h4>
+      </div>
+
+       <div class="child-card" onclick="openPopup('aunty3(baba).jpeg',
+      'balkisu Umar Shehu',
+       'Age: 18 years',)">
+        <img src="aunty3(baba).jpeg" alt="Kid 4">
+        <h4>Balkisu Umar Shehu</h4>
+      </div>
+
+       <div class="child-card" onclick="openPopup('aunty4(baba).jpeg',
+      'Rahma Umar Shehu',
+       'Age: 17 years',)">
+        <img src="aunty4(baba).jpeg" alt="Kid 4">
+        <h4>Rahma Umar Shehu</h4>
+      </div>
+
+    </div>
+
+    </div>
+
+    
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+
+      <div class="popup-images">
+        <img id="popupMain" src="">
+      </div>
+
+      <!-- ADDED TEXT SECTION -->
+      <div class="popup-text">
+        <h2 id="popupName"></h2>
+        <p id="popupBio"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    function openPopup(imgSrc, name, bio) {
+      document.getElementById("popupMain").src = imgSrc;
+      document.getElementById("popupName").textContent = name;
+      document.getElementById("popupBio").textContent = bio;
+
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

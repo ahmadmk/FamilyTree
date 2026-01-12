@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wife – Biography</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #f7f9fc;
+  line-height: 1.6;
+}
+
+/* ------------------------------ */
+/* WIFE PROFILE */
+/* ------------------------------ */
+
+.wife-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.wife-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+  margin-bottom: 20px;
+}
+
+.wife-info h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.wife-info p {
+  max-width: 520px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Larger Screens */
+@media (min-width: 768px) {
+  .wife-profile {
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+/* ------------------------------ */
+/* NO CHILDREN SECTION */
+/* ------------------------------ */
+
+.no-children {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.no-child-card {
+  max-width: 420px;
+  margin: auto;
+  padding: 30px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.no-child-card h2 {
+  margin: 0 0 10px;
+  font-size: 26px;
+}
+
+.no-child-card p {
+  font-size: 16px;
+  color: #444;
+}
+
+  </style>
+
+  <link rel="stylesheet" href="wife-no-children.css">
+
+  <!-- Scroll Animation -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Wife Profile Section -->
+  <section class="wife-profile" data-aos="fade-up">
+    <img src="wife-photo.jpg" class="wife-photo" alt="Wife image">
+
+    <div class="wife-info">
+      <h1>Wife Name</h1>
+      <p>
+        beloved wife of Alhaji Shehu Ahmed Katcha,
+      </p>
+    </div>
+  </section>
+
+  <!-- No Children Section -->
+  <section class="no-children" data-aos="fade-up">
+    <div class="no-child-card">
+      <h2>No Children</h2>
+      <p>This wife does not have any children recorded in the family lineage.</p>
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+</body>
+</html>

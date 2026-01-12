@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ahmad Muhammad Portfolio</title>
+<style>
+/* ---------- Global Styles ---------- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4f8, #d9eaf7);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* ---------- Header ---------- */
+header {
+  text-align: center;
+  padding: 50px 20px 20px 20px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  color: #1a73e8;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* ---------- Portfolio Cards Container ---------- */
+.portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin: 40px 20px;
+}
+
+/* ---------- Card Styles ---------- */
+.card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  width: 300px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 35px rgba(0,0,0,0.25);
+}
+
+/* ---------- Card Image ---------- */
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* ---------- Card Content ---------- */
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin: 0;
+  color: #1a73e8;
+  font-size: 1.5rem;
+}
+
+.card-content p {
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* ---------- Card Button ---------- */
+.card-content a {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1a73e8;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.card-content a:hover {
+  background: #e91a63;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 650px) {
+  .portfolio-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Ahmad Muhammad</h1>
+  <p>Front-End Web Developer | Creative Problem Solver</p>
+</header>
+
+<div class="portfolio-container">
+  <!-- Card 1 -->
+  <div class="card">
+    <img style="height: 220px;" src="IMG_8007.JPG" alt="Project 1">
+    <div class="card-content">
+      <h3>Responsive Web Design</h3>
+      <p>
+        Created a fully responsive website for a small business using HTML, CSS, and JavaScript. Focused on accessibility, animations, and cross-browser compatibility.
+      </p>
+      <a href="https://github.com/ahmadmk">View Projects</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
