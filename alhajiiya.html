@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>First Child & Family</title>
+
+  <style>
+   body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f2f5fc;
+}
+
+/* ------------------------ */
+/* COUPLE CARDS */
+/* ------------------------ */
+.couple-section {
+  padding: 30px 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.person-card {
+  width: 260px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.person-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.person-card h3 {
+  font-size: 20px;
+  margin-top: 15px;
+}
+
+/* ------------------------ */
+/* BIOGRAPHY SECTION */
+/* ------------------------ */
+.biography {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+.biography h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.biography p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* ------------------------ */
+/* CHILDREN GRID */
+/* ------------------------ */
+.children-section {
+  padding: 30px;
+  text-align: center;
+}
+
+.children-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.children-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  padding: 0 20px;
+}
+
+.child-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+  text-align: center;
+  padding-bottom: 15px;
+  cursor: pointer;
+  transition: transform .2s;
+}
+
+.child-card:hover {
+  transform: scale(1.03);
+}
+
+.child-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.child-card h4 {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* ------------------------ */
+/* POPUP */
+/* ------------------------ */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  width: 90%;
+  max-width: 850px;
+  padding: 25px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.popup-images {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popup-images img {
+  width: 45%;
+  max-width: 330px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.placeholder-box {
+  width: 45%;
+  max-width: 330px;
+  height: 300px;
+  background: #e5e7eb;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ------------------------ */
+/* POPUP TEXT SECTION */
+/* ------------------------ */
+
+.popup-text {
+  margin-top: 25px;
+  text-align: center;
+}
+
+.popup-text h2 {
+  font-size: 26px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.popup-text p {
+  font-size: 16px;
+  color: #444;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+  </style>
+
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <!-- Couple Section -->
+  <section class="couple-section" data-aos="fade-up">
+    <div class="person-card">
+      <img src="Yahaya shehu Ahmed.jpg" alt="First child">
+      <h3>Yahaya Shehu Ahmed</h3>
+    </div>
+
+    <div class="person-card">
+      <img src="alhajiiya.webp" alt="Spouse image">
+      <h3>Aishatu Abdullahi & Adama Muhammad wadata</h3>
+    </div>
+  </section>
+
+
+  <!-- Biography Between Couple and Children -->
+  <section class="biography" data-aos="fade-up">
+    <h2>Biography</h2>
+    <p>
+Yahaya Shehu Ahmed was born on 15th March 1975. He is married to Aishatu Abdullahi and Adama Muhammad Wadata, with whom he has ten children. He attended Zarumai Model School for his primary education and Government Day Secondary School for his secondary education. He obtained an NCE certificate and has since worked as a civil servant. His dedication to both family and career is widely respected, and he remains active in his professional and community engagements. You can reach him at 08062822368.  <!-- Children Grid -->
+  <section class="children-section" data-aos="fade-up">
+    <h2>Their Children</h2>
+
+    <div class="children-grid">
+
+      <div class="child-card" onclick="openPopup( 'Ahmed khadijat yahaya.jpg',
+      'Ahmed khadijat yahaya', 
+      'Age: 23',)">
+        <img src="Ahmed khadijat yahaya.jpg" alt="Kid 1">
+        <h4>Ahmed khadijat yahaya</h4>
+      </div>
+
+      <div class="child-card" onclick="openPopup('Fatima yahaya ahmed2.jpg',
+      'Fatima yahaya ahmed',
+       'Age: 22 years',)">
+        <img src="Fatima yahaya ahmed2.jpg" alt="Kid 2">
+        <h4>Fatima Yahaya Ahmed</h4>
+      </div>
+        <div class="child-card" onclick="openPopup('Hindu Yahaya Ahmed.jpg',
+      'Hindu Yahaya Ahmed',
+       'Age: 20 years',)">
+        <img src="Hindu Yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Hindu Yahaya Ahmed</h4>
+      </div>
+
+        <div class="child-card" onclick="openPopup('Fatima yahaya ahmed.jpg',
+      'Fatima yahaya ahmed',
+       'Age: 19 years',)">
+        <img src="Fatima yahaya ahmed.jpg" alt="Kid 4">
+        <h4>Fatima Yahaya Ahmed</h4>
+      </div>
+
+        <div class="child-card" onclick="openPopup('Habiba Yahaya Ahmed.jpg',
+      'Habiba Yahaya Ahmed',
+       'Age: 10 years',)">
+        <img src="Habiba Yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Habiba Yahaya Ahmed</h4>
+      </div>
+
+        <div class="child-card" onclick="openPopup('Ruqayya yahaya Ahmed.jpg',
+      'Ruqayya yahaya Ahmed',
+       'Age: 9 years',)">
+        <img src="Ruqayya yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Ruqayya yahaya Ahmed</h4>
+      </div>
+
+       <div class="child-card" onclick="openPopup('Ahmed Yahaya Ahmed.jpg',
+      'Ahmed Yahaya Ahmed',
+       'Age: 8 years',)">
+        <img src="Ahmed Yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Ahmed Yahaya Ahmed</h4>
+      </div>
+
+       <div class="child-card" onclick="openPopup('Adama yahaya Ahmed.jpg',
+      'Adama yahaya Ahmed',
+       'Age: 8 years',)">
+        <img src="Adama yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Adama yahaya Ahmed</h4>
+      </div>
+
+      <div class="child-card" onclick="openPopup('fati3.jpeg',
+      'Fatima Yahaya Ahmed',
+       'Age: 6 years',)">
+        <img src="fati3.jpeg" alt="Kid 4">
+        <h4>Fatima Yahaya Ahmed</h4>
+      </div>
+
+      <div class="child-card" onclick="openPopup('Mohammed Yahaya Ahmed.jpg',
+      'Mohammed Yahaya Ahmed',
+       'Age: 1 year',)">
+        <img src="Mohammed Yahaya Ahmed.jpg" alt="Kid 4">
+        <h4>Mohammed Yahaya Ahmed</h4>
+      </div>
+
+
+    </div>
+
+    </div>
+
+    
+  </section>
+
+  <!-- Popup Modal -->
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">×</span>
+
+      <div class="popup-images">
+        <img id="popupMain" src="">
+      </div>
+
+      <!-- ADDED TEXT SECTION -->
+      <div class="popup-text">
+        <h2 id="popupName"></h2>
+        <p id="popupBio"></p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+
+  <script>
+    function openPopup(imgSrc, name, bio) {
+      document.getElementById("popupMain").src = imgSrc;
+      document.getElementById("popupName").textContent = name;
+      document.getElementById("popupBio").textContent = bio;
+
+      document.getElementById("popup").style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>
